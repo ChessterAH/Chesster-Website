@@ -172,6 +172,7 @@
     padding: 1.5vw;
     text-align: left;
     overflow-y: scroll;
+
   }
   
   .fadebox:hover .overlay {
@@ -202,5 +203,10 @@
     background: transparent;
     border-radius: 20px; 
   }
+
+  .headshot {
+    filter: drop-shadow(10px 10px 6px black)
+  }
+  
 
   
