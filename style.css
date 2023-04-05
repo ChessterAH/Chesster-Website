@@ -171,7 +171,7 @@
     background-color: rgba(48,48,48, 0.7);
     padding: 1.5vw;
     text-align: left;
-    overflow-y: scroll;
+    overflow-y: auto;
 
   }
   
