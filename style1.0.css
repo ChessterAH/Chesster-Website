@@ -24,10 +24,12 @@ td {
   padding: 30px;
 }
 td img {
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  padding-bottom: 30px;
+  height: 300px
 }
 .row {
   margin-left: -5px;
@@ -225,7 +227,7 @@ td img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 265vh;
+  top: 310vh;
   width: 25%;
   padding: 16px;
   margin-top: -25\2px;
@@ -333,3 +335,112 @@ img {
   color: white;
   transform: rotateY(180deg);
 }
+
+
+/*What was at the top of the doc*/
+ul {
+    list-style-type: none;
+    height: 14vh;
+    padding: 10px 10px;
+    background-color: #fbf7f6;
+    font-family: "Oranienbaum";
+  }
+  li a {
+    display: inline-block;
+    padding: 17px;
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    float: right;
+  }
+  /*footer style*/
+  #footer {
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #fbf7f6;
+    font-family: "Oranienbaum";
+    font-size: larger;
+    border: 2px solid black;
+    position: absolute;
+    left: 0px;
+    bottom: auto;
+    width: 100%;
+    height: fit-content;
+    margin-top: 20vh;
+  }
+  a {
+    text-decoration: none;
+    margin: 8px;
+    color: black;
+  }
+  li {
+    line-height: 50px;
+  }
+  .underline {
+    border-bottom: 1px solid #000000;
+    max-width: 78vh;
+    padding-bottom: -100px;
+  }
+  .underline2 {
+    border-bottom: 1px solid #000000;
+    max-width: 66vh;
+    padding-bottom: -100px;
+  }
+  li b {
+    font-size: large;
+    font-weight: normal;
+  }
+  .slider {
+    width: 500px;
+    height: 400px;;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: hidden;
+  }
+  .image-container {
+    width: 1500px;  
+    background-color: red;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+    -o-transition: left 1s;
+    transition: left 1s;
+  }
+
+  .slide {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+
+  }
+  #slide-1:target ~ .image-container {
+    left: 0px;
+  }
+  #slide-2:target ~ .image-container {
+    left: -500px;
+  }
+  #slide-3:target ~ .image-container {
+    left: 0px;
+  }
+  #slide-4:target ~ .image-container {
+    left: -500px;
+  }
+  #slide-5:target ~ .image-container {
+    left: -1000px;
+  }
+  .buttons {
+    position: relative;margin-top: -20vh;margin-bottom: 2px;
+    top:30px
+  }
+  .buttons a {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: rgb(97, 89, 84);
+    border: 1px solid black;
+
+  }
