@@ -172,7 +172,7 @@ table, td {border:2px solid black;}
   .prev,
   .next {
     cursor: pointer;
-    position: absolute; top: 250vh; 
+    position: absolute; top: 275vh; 
     width: 25%;
     padding: 16px;
     margin-top: -25\2px;
