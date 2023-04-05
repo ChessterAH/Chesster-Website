@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap">
-        <link href="style2.css" rel="stylesheet" />
+        <link href="thomas_electro.css" rel="stylesheet" />
         <title>
             Chesster Electrical Components
         </title>
@@ -78,184 +78,183 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
     <div class="row">
       <div class="column">
         <table style="background-color: #FBF7F6;">
-          <th></th>
-          <th style="margin-left: auto;margin-right: auto; font-size: xx-large;font-family: Oranienbaum;">Electrical Flow</th>
-          <th></th>
-          <tr>
+            <script>
+              function on(overlayId, buttonId) {
+                document.getElementById(overlayId).style.display = "block";
+                document.getElementById(buttonId).style.display = "none";
+              }
+              
+              function off(overlayId, buttonId) {
+                document.getElementById(overlayId).style.display = "none";
+                document.getElementById(buttonId).style.display = "block";
+              }
+            </script>
             <th></th>
-            <th style="font-size: medium;font-family: Oranienbaum;font-weight: lighter;">
-              Click the chesspieces to see Chesster's electrical flow!</th>
+            <th style="margin-left: auto;margin-right: auto; font-size: xx-large;font-family: Oranienbaum;">Electrical Flow</th>
             <th></th>
-          </tr>
-          <tr>
-            <td class="enemy"></td>
-            <td class="friend">
-              <div id="overlay" onclick="off()">
-                <div id="text">Player moves chesspiece with a magnetic bottom onto a square.</div>
-              </div>
-              
-              <div style="text-align: center;">
-                <button style="font-family: Oranienbaum; font-size: x-large; font-weight: bold;;background-color: #FBF7F6;border:2px solid black"
-                 onclick="on()">STEP 1</button>
-              </div>
-              <script>
-                function on() {
-                  document.getElementById("overlay").style.display = "block";
-                }
-                
-                function off() {
-                  document.getElementById("overlay").style.display = "none";
-                }
-                </script>
-              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
-            </td>
-            <td class="enemy"></td>
-          </tr>
-          <tr>
-            <td class="friend">
-              <div id="overlay2" onclick="off2()">
-                <div id="text2">A reed sensor underneath the square senses the magnet's field and sends a 0 volt signal through a connected wire.</div>
-              </div>
-              
-              <div style="text-align: center;">
-                <button style="font-family: Oranienbaum; font-size: x-large; font-weight: bold;;background-color: #FBF7F6;border:2px solid black"
-                 onclick="on2()">STEP 2</button>
-              </div>
-              <script>
-                function on2() {
-                  document.getElementById("overlay2").style.display = "block";
-                }
-                
-                function off2() {
-                  document.getElementById("overlay2").style.display = "none";
-                }
-                </script>
-              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
-            </td>
-            <td class="enemy"></td>
-            <td class="friend">
-              <div id="overlay3" onclick="off3()">
-                <div id="text3">The wire carries the 0 volt signal to one of the multiplexers, which is in turn connected to the Arduino.</div>
-              </div>
-              
-              <div style="text-align: center;">
-                <button style="font-family: Oranienbaum; font-size: x-large; font-weight: bold;;background-color: #FBF7F6;border:2px solid black"
-                 onclick="on3()">STEP 3</button>
-              </div>
-              <script>
-                function on3() {
-                  document.getElementById("overlay3").style.display = "block";
-                }
-                
-                function off3() {
-                  document.getElementById("overlay3").style.display = "none";
-                }
-                </script>
-              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
-            </td>
-          </tr>
-          <tr>
-            <td class="enemy">
-              <div id="overlay4" onclick="off4()">
-                <div id="text4">The Arduino recieves the signal, and the Chess AI calculates which square the player should place their piece next. 
-                  The code outputs the LED index of this new square.</div>
-              </div>
-              
-              <div style="text-align: center;">
-                <button style="font-family: Oranienbaum; font-size: x-large; font-weight: bold;;background-color: #B4C89B;border:2px solid black"
-                 onclick="on4()">STEP 4</button>
-              </div>
-              <script>
-                function on4() {
-                  document.getElementById("overlay4").style.display = "block";
-                }
-                
-                function off4() {
-                  document.getElementById("overlay4").style.display = "none";
-                }
-                </script>
-              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
-            </td>
-            <td class="friend"></td>
-            <td class="enemy">
-              <div id="overlay5" onclick="off5()">
-                <div id="text5">The new index information is sent out of the Arduino through output pins, which are connected to wires.
-                  These wires transfer the output to the LEDs.
+            <tr>
+              <th colspan="3" style="font-size: large;font-family: Oranienbaum;font-weight: lighter; justify-content: center;
+              align-self: center;padding-bottom: 5px;">
+                Click the chesspieces to see Chesster's electrical flow!</th>
+            </tr>
+            <tr>
+  
+              <td class="enemy"></td>
+  
+              <td class="friend">
+                <div id="overlay1" class="overlay" onclick="off('overlay1', 'button1')" style="margin: auto; border: none;">
+                  <div id="text">Player moves chesspiece with a magnetic bottom onto a square.</div>
                 </div>
-              </div>
+                <button id="button1" onclick="on('overlay1', 'button1')" style="width: 100%; height: 100%; border: none;">
+                  <p style="font-family: Oranienbaum; font-size: x-large; font-weight: bold; 
+                  background-color: #FBF7F6;border:2px solid black">
+                    STEP 1
+                  </p>
+                  <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
+                </button>
+              </td>
+  
+              <td class="enemy"></td>
+  
+            </tr>
+            <!--Second Row-->
+            <tr>
+  
+              <td class="friend">
+  
+                <div id="overlay2" class="overlay" onclick="off('overlay2', 'button2')" style="margin: auto; border: none;">
+                  <div id="text">
+                    A reed sensor underneath the square senses the 
+                    magnet's field and sends a 0 volt signal through a connected wire.
+                  </div>
+                </div>
+  
+                <button id="button2" onclick="on('overlay2', 'button2')" style="width: 100%; height: 100%; border: none;">
+                  <p style="font-family: Oranienbaum; font-size: x-large; font-weight: bold; 
+                  background-color: #FBF7F6;border:2px solid black">
+                    STEP 2
+                  </p>
+                  <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
+                </button>
+              </td>
               
-              <div style="text-align: center;">
-                <button style="font-family: Oranienbaum; font-size: x-large; font-weight: bold;;background-color: #B4C89B;border:2px solid black"
-                 onclick="on5()">STEP 5</button>
-              </div>
-              <script>
-                function on5() {
-                  document.getElementById("overlay5").style.display = "block";
-                }
-                
-                function off5() {
-                  document.getElementById("overlay5").style.display = "none";
-                }
-                </script>
-              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
-            </td>
-          </tr>
-          <tr>
-            <td class="friend"></td>
-            <td class="enemy">
-              <div id="overlay6" onclick="off6()">
-                <div id="text6">The LED at the new square lights up red!</div>
-              </div>
+              <td class="enemy"></td>
               
-              <div style="text-align: center;">
-                <button style="font-family: Oranienbaum; font-size: x-large; font-weight: bold;;background-color: #B4C89B;border:2px solid black"
-                 onclick="on6()">STEP 6</button>
-              </div>
-              <script>
-                function on6() {
-                  document.getElementById("overlay6").style.display = "block";
-                }
-                
-                function off6() {
-                  document.getElementById("overlay6").style.display = "none";
-                }
-                </script>
-              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
-            </td>
-            <td class="friend"></td>
-          </tr>
+              <td class="friend">
+                <div id="overlay3" class="overlay" onclick="off('overlay3', 'button3')" style="margin: auto; border: none;">
+                  <div id="text">
+                    The wire carries the 0 volt signal to one of the multiplexers, 
+                    which is in turn connected to the Arduino.
+                  </div>
+                </div>
+  
+                <button id="button3" onclick="on('overlay3', 'button3')" style="width: 100%; height: 100%; border: none;">
+                  <p style="font-family: Oranienbaum; font-size: x-large; font-weight: bold; 
+                  background-color: #FBF7F6;border:2px solid black">
+                    STEP 3
+                  </p>
+                  <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
+                </button>
+              </td>
+            </tr>
+            <!--Third Row-->
+            <tr>
+  
+              <td class="enemy">
+                <div id="overlay4" class="overlay" onclick="off('overlay4', 'button4')" style="margin: auto; border: none;">
+                  <div id="text">
+                    The Arduino recieves the signal, and the Chess AI calculates which 
+                    square the player should place their piece next. The code outputs the LED index of this new square.
+                  </div>
+                </div>
+  
+                <button id="button4" onclick="on('overlay4', 'button4')" style="width: 100%; height: 100%; 
+                border: none; background-color: #B4C89B;">
+                  <p style="font-family: Oranienbaum; font-size: x-large; font-weight: bold; 
+                  background-color: #B4C89B;border:2px solid black">
+                    STEP 4
+                  </p>
+                  <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
+                </button>
+              </td>
+  
+              <td class="friend"></td>
+  
+              <td class="enemy">
+                <div id="overlay5" class="overlay" onclick="off('overlay5', 'button5')" style="margin: auto; border: none;">
+                  <div id="text">
+                    The new index information is sent out of the Arduino through output pins, 
+                    which are connected to wires. These wires transfer the output to the LEDs.
+                  </div>
+                </div>
+  
+                <button id="button5" onclick="on('overlay5', 'button5')" style="width: 100%; 
+                height: 100%; border: none; background-color: #B4C89B;">
+                  <p style="font-family: Oranienbaum; font-size: x-large; font-weight: bold; 
+                  background-color: #B4C89B;border:2px solid black">
+                    STEP 5
+                  </p>
+                  <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
+                </button>
+              </td>
+            </tr>
+            <!--Fourth Row-->
+            <tr>
+  
+              <td class="friend"></td>
+  
+              <td class="enemy">
+                <div id="overlay6" class="overlay" onclick="off('overlay6', 'button6')" style="margin: auto; border: none;">
+                  <div id="text">
+                    The LED at the new square lights up red!
+                  </div>
+                </div>
+  
+                <button id="button6" onclick="on('overlay6', 'button6')" style="width: 100%; height: 100%; 
+                border: none; background-color: #B4C89B;">
+                  <p style="font-family: Oranienbaum; text-align: center; font-size: x-large; font-weight: bold;
+                  background-color: #B4C89B;border:2px solid black">
+                    STEP 6
+                  </p>
+                  <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chess-piece.png?v=1680421760491" style="width:90px;">
+                </button>
+              </td>
+  
+              <td class="friend"></td>
+  
+            </tr>
         </table>
 
         
       </div>
       <div class="column">
-        <table style="background-color: #FBF7F6; width: 92vh;">
-          <tr>
-            <th style="font-size: xx-large; font-family: Oranienbaum;text-align: left;border:black dotted 2px;">Materials List</th>
-          </tr>
-          <tr>
-            <td style="border: black 2px dotted;font-size: x-large; font-family: Oranienbaum;">
-              <ul style="list-style-type: disc;height: fit-content; margin-left: 30px;">
-              <li class="underline">Reed Sensors</li>
-              <li class="underline2"style="margin-left: 80px;"><b>Count: 64</b></li>
-              <li class="underline2"style="margin-left: 80px;line-height:30px"><b>Soldered underneath the chessboard squares and to wires that connect to multiplexer(s)</b></li>
-              <li class="underline2"style="margin-left: 80px;line-height:30px"><b>Sends signal current to multiplexer(s) if magnetic field from chesspieces is sensed</b></li>
-
-              <li class="underline">16-to-1 Multiplexers </li>
-              <li class="underline2"style="margin-left: 80px;"><b>Count: 4</b></li>
-              <li class="underline2"style="margin-left: 80px;"><b>Bridge between electrical hardware and software</b></li>
-              <li class="underline2"style="margin-left: 80px;"><b>Each one takes input from 2 rows of the board</b></li>
-
-              <li class="underline">Arduino Mega</li>
-              <li class="underline2"style="margin-left: 80px;line-height:30px"><b>Orgiginal plan was to use Arduino Uno Rev3, however it did not have enough memory, hence the switch.</b></li>
-              <li class="underline2"style="margin-left: 80px;"><b>DC 5521 input for direct powerbank connection</b></li>
-              <li class="underline">12 Volt Power Bank </li>
-              <li class="underline">LED Strips </li>
-              <li class="underline">Other Materials:</li>
-              <li class="underline2"style="margin-left: 80px;">Wires, Wire Clips, Male Headers, Soldering Tools, Ribbon Cables, 2 Breadboards, Buttons</li>
-            </ul>
-            </td>
-          </tr>
+        <table style="background-color: #FBF7F6;">
+            <tr>
+                <th style="font-size: xx-large; font-family: Oranienbaum;text-align: left; text-align: center;">Materials List</th>
+              </tr>
+              <tr margin>
+                <td style="font-size: x-large; font-family: Oranienbaum; border: none;">
+                  <ul style="list-style-type: disc;height: fit-content; margin-left: 5%;">
+                  <li class="item">Reed Sensors</li>
+                  <li class="item2"><b>Count: 64</b></li>
+                  <li class="item2"><b>Soldered underneath the chessboard squares and to wires that connect to multiplexer(s)</b></li>
+                  <li class="item2"><b>Sends signal current to multiplexer(s) if magnetic field from chesspieces is sensed</b></li>
+    
+                  <li class="item">16-to-1 Multiplexers </li>
+                  <li class="item2"><b>Count: 4</b></li>
+                  <li class="item2"><b>Bridge between electrical hardware and software</b></li>
+                  <li class="item2"><b>Each one takes input from 2 rows of the board</b></li>
+    
+                  <li class="item">Arduino Mega</li>
+                  <li class="item2"><b>Orgiginal plan was to use Arduino Uno Rev3, however it did not have enough memory, hence the switch.</b></li>
+                  <li class="item2"><b>DC 5521 input for direct powerbank connection</b></li>
+                  <li class="item" >12 Volt Power Bank </li>
+                  <li class="item" >LED Strips </li>
+                  <li class="item">Other Materials:</li>
+                  <li class="item2">Wires, Wire Clips, Male Headers, Soldering Tools, Ribbon Cables, 2 Breadboards, Buttons</li>
+                  </ul>
+                </td>
+              </tr>
         </table>
       </div>
     </div>
