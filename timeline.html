@@ -13,7 +13,7 @@
 
         .nav_bar{
         list-style-type: none;
-        height: 10vh;
+        height: 15vh;
         margin: 0;
         padding: 10px 10px;
         background-color: #FBF7F6;
@@ -30,8 +30,7 @@
             font-size: xx-large;
         }
 
-        footer{
-            display: flex; 
+        footer{ 
             margin-top: 40px;
             text-align: center;
             padding: 10px 10px;
@@ -49,6 +48,7 @@
         .update{
             padding: 10px;
             background-color: white;
+            border: 2px solid black;
             font-family: "Oranienbaum";
         }
     </style>
@@ -73,8 +73,96 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
     <!-- Content-->
     <div class="container">
         <div class="timeline">
-            
+
             <div class="line" style="margin-top: 25px;"></div>
+
+            <!-- Week 4 Objective and Challenges -->
+            <div class="section">
+                <div class="content" style="text-align: center;">
+                    <h1 style="color: darkred;  margin: 2px;"> <b> Week 4: 3/30 - 4/5 </b> </h1>
+                    <h2 style="color:darkred">Weekly Objectives</h2>
+                    <p style="color:black; margin: 7px;">   
+                            <p style="color:black"> <b>Electrical</b>: Finish the wiring and finalize all aspects </p>
+                            <p style="color:black"> <b>Software</b>: Test the software with the complete board</p>
+                            <p style="color:black"> <b>Mechanical</b>: Combine all the components and complete the finishing touches </p>
+                    </p>
+                    <h2 style="color:darkred">Challenges</h2>
+                    <p style="color:black; margin: 7px;">
+                            <h3 style="color:black"> Electrical </h3>
+                            <p style="color:black"> We ran into issues with sensing so we replaced the broken/finicky reed sensors. 
+                                Additionally, the chess pieces' magnets weren't strong enough so we decided to use two 
+                                magnets at the bottom of each chess piece.                                 
+                            </p>
+                            <h3 style="color:black"> Software </h3>
+                            <p style="color:black"> [insert software challenge] 
+                            </p>
+                            <h3 style="color:black"> Mechanical </h3>
+                            <p style="color:black"> The dividers are letting more light bleed to other 
+                                squares than anticipated so we have to add some more wood to corners.
+                            </p> 
+                    </p>
+                    <div class="img">
+                        <img src="brian.png" style = "width: 300px; height: 300px; border-radius: 10px; border: 1px solid black;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 4 Progress and Next Steps -->
+            <div class="section">
+                <div class="bead"></div>
+                <div class="content" style="text-align: center;">
+                    <h1 style="color: darkred; margin: 2px;"> <b> Week 4: 3/30 - 4/5 </b></h1>
+                    <p style="color:black; margin: 7px;">
+                        <h2 style="color:darkred">Progress</h2>
+                                <h3 style = "color:black"> Electrical </h3>
+                                <p style="color:black"> 
+                                    (1) Finished all the wiring underneath the board. 
+                                </p>
+                                <p style="color:black">
+                                    (2) Connected all the reed sensors to the multiplexers. 
+                                </p>
+                                <p style="color:black">
+                                    (3) Taped all the reed sensors to the top of the board
+                                    using electrical tape. 
+                                </p>
+                                <p style="color:black">
+                                    (4) Tested all the reed sensors through the wood.  
+                                </p>
+                                <h3 style="color:black"> Software </h3>
+                                <p style="color:black"> 
+                                    (1) Added setup led method to check if all the pieces 
+                                    are sensing at start of game
+                                </p>
+                                <p style="color:black"> 
+                                    (2) Tested playing a game with the full board and it worked!
+                                </p>
+                                <h3 style="color:black"> Mechanical </h3>
+                                <p style="color:black">
+                                    (1) Drilled holes in the corners of each square 
+                                </p>
+                                <p style="color:black">
+                                    (2) Drilled 3 holes for the battery pack
+                                </p>
+                                <p style="color:black">
+                                    (3) Drilled holes for buttons
+                                </p>
+                                <p style="color:black">
+                                    (4) Added hinges for the top
+                                </p>
+                                <p style="color:black">
+                                    (5) Fixed up painting and added finisher
+                                </p>
+                                <p style="color:black">
+                                    (6) Glued down LEDs and dividers on top
+                                </p>
+                    </p>
+                    <div class="img">
+                        <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/image%203.jpeg?v=1679309828353"
+                        style = "width: 300px; height: 300px; border-radius: 10px; border: 1px solid black;">
+                    </div>
+                </div>
+            </div>
+
             <!-- Week 3 Objective and Challenges -->
             <div class="section">
                 <div class="content" style="text-align: center;">
@@ -87,7 +175,6 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
                     </p>
                     <h2 style="color:darkred">Challenges</h2>
                     <p style="color:black; margin: 7px;">
-                        <ul>
                             <h3 style="color:black"> Electrical </h3>
                             <p style="color:black"> We had some issues with sensing inputs but fixed with adding 
                                 some code to the arduino script.
@@ -105,8 +192,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
                             <p style="color:black"> The dividers at first were too loose fitting together 
                                 (like jigsaw pieces) so we had to redo laser cutting 
                                 them so they fit tighter.
-                            </p>
-                        </ul> 
+                            </p> 
                     </p>
                     <div class="img">
                         <img src="brian.png" style = "width: 300px; height: 300px; border-radius: 10px; border: 1px solid black;">
@@ -118,10 +204,9 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
             <div class="section">
                 <div class="bead"></div>
                 <div class="content" style="text-align: center;">
-                    <h1 style="color: darkred; margin: 2px;"> Week 3: 3/23 - 3/29 </h1>
+                    <h1 style="color: darkred; margin: 2px;"> <b> Week 3: 3/23 - 3/29 </b></h1>
                     <p style="color:black; margin: 7px;">
                         <h2 style="color:darkred">Progress and Next Steps</h2>
-                            <ul>
                                 <h3 style = "color:black"> Electrical </h3>
                                 <p style="color:black"> 
                                     (1) Finished debugging multiplexers and finished grid system
@@ -165,7 +250,6 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
                                     Next Steps: We need to drill holes in the corners, glue dividers to the bottom of the board,
                                     and attach the hinge to the top of the board and the box
                                 </p>
-                            </ul>
                     </p>
                     <div class="img">
                         <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/image%203.jpeg?v=1679309828353"
@@ -178,18 +262,15 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
             <div class="section">
                 <div class="bead"></div>
                 <div class="content" style="text-align: center;">
-                    <h1 style="color: darkred; margin: 2px;"> Week 2: 3/16 - 3/22 </h1>
+                    <h1 style="color: darkred; margin: 2px;"> <b>Week 2: 3/16 - 3/22</b></h1>
                     <p style="color:black; margin: 7px;">
-                        <h2 style="color:darkred">Weekly Objectives</h2>
-                            <ul>    
+                        <h2 style="color:darkred">Weekly Objectives</h2>    
                                 <p style="color:black"> <b>Electrical</b>: Work on Reed Sensor Grid</p>
                                 <p style="color:black"> <b>Software</b>: Work on LED coding</p>
                                 <p style="color:black"> <b>Mechanical</b>: Build the box of the chess board</p>
-                            </ul>
                     </p>
                     <p style="color:black; margin: 7px;">
                         <h2 style="color:darkred">Challenges</h2>
-                        <ul>
                             <h3 style="color:black"> Electrical </h3>
                             <p style="color:black"> We ran into issues with testing multiplexers. We are not sure if 
                                 the multiplexers are bugged or if we are testing incorrectly.
@@ -200,8 +281,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
                             </p>
                             <h3 style="color:black"> Mechanical </h3>
                             <p style="color:black"> We had issues with choosing wrong dimensions but fixed by recalculating.
-                            </p>
-                        </ul> 
+                            </p> 
                     </p>
                     <div class="img">
                         <img src="IMG_4566.png" style = "width: 300px; height: 300px; border-radius: 10px; border: 1px solid black;">
@@ -213,10 +293,9 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
             <div class="section">
                 <div class="bead"></div>
                 <div class="content" style="text-align: center;">
-                    <h1 style="color: darkred; margin: 2px;"> Week 2: 3/16 - 3/22 </h1>
+                    <h1 style="color: darkred; margin: 2px;"> <b> Week 2: 3/16 - 3/22 </b></h1>
                     <p style="color:black; margin: 7px;">
                         <h2 style="color:darkred">Progress and Next Steps</h2>
-                        <ul>
                             <h3 style="color:black"> Electrical </h3>
                             <p style="color:black">
                                 (1) Soldered ribbon cables to multiplexers
@@ -255,7 +334,6 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
                             <p style="color:black">
                                 Next Steps: We need to code the LED to respond to AI output 
                             </p>
-                        </ul>
                     </p>
                     <div class="img">
                         <img src="IMG_3175.png" style = "width: 300px; height: 300px; border-radius: 10px; border: 1px solid black;">
@@ -266,15 +344,13 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
             <div class="section" style="margin-bottom: 0;">
                 <div class="bead"></div>
                 <div class="content" style="text-align: center;">
-                    <h1 style="color: darkred; margin: 2px;"> Week 1: 3/9 - 3/15 </h1>
+                    <h1 style="color: darkred; margin: 2px;"> <b> Week 1: 3/9 - 3/15 </b></h1>
                     <p style="color:black; margin: 7px;">
                         <h2 style="color:darkred">Progress</h2>
-                            <ul>
                                 <p style="color:black"> Ordered materials </p>
                                 <p style="color:black"> Started reading up on Chess AI and how it worked</p>
                                 <p style="color:black"> Planned electrical component design with reed sensors and multiplexers </p>
                                 <p style="color:black"> Planned physical design with wood and laser cutting</p>
-                            </ul>
                     </p>
                     <div class="img">
                         <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/image%201.jpeg?v=1679309821036"
@@ -289,7 +365,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
     <script src="timeline.js"></script>
 
     <!--Footer-->
-    <footer>
+    <footer style = "text-align: center;">
         <a href= "about.html">About</a>
         <a href= "timeline.html">Process</a>
         <a href= "mechanical.html">Mechanical</a>
