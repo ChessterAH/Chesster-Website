@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap">
-        <link href="style2.css" rel="stylesheet" />
+        <link href="test.css" rel="stylesheet" />
         <title>
             Chesster Software Components
         </title>
@@ -13,15 +13,17 @@
         
         .nav_bar{
         list-style-type: none;
-        height: 10vh;
+        height: 12vh;
         margin: 0;
         padding: 10px 10px;
         background-color: #FBF7F6;
-        font-family: "Oranienbaum";        
+        font-family: "Oranienbaum";   
+        font-size: xx-large;     
         }
         
         .nav{
             float: right;
+            padding: 10px;
         }
 
         footer{
@@ -92,7 +94,6 @@
             background-color: rgba(48,48,48, 0.7);
             padding: 1.5vw;
             text-align: left;
-            overflow-y: scroll;
 
 
         }
@@ -112,27 +113,27 @@
         <li class="nav"><a class = "nav_link" href= "electrical.html">Electrical</a></li>
         <li class="nav"><a class = "nav_link" href= "software.html">Software</a></li>
         <li class="nav"><a class = "nav_link" href= "index.html">Home</a></li>
-        <li style="float: left"><a class = "nav_link" href= "index.html">Chesster</a></li>
+        <li style="float: left" class="nav"><a class = "nav_link" href= "index.html">Chesster</a></li>
      </ul>
     <!--Software Title Card-->
     <div style="text-align: center;">
         <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/software%20title.png?v=1679505483075" alt="projtitle"
         style="width: 855px; height: 164px;
-        margin-top: 50px; margin-bottom: 50px; display: inline-block;">
+        margin-top: 70px; margin-bottom: 70px; display: inline-block;">
     </div>
 
     <div class="software_header" 
     style="margin-left:auto; margin-right: auto; background-color: #c99885; border: 1px solid black; width: 1100px; border-radius: 5px;">
         <div class="software_head_text"
         style="background-color: #f3e4dd; width: calc(100%-30px); height: 100%;
-        margin: 10px; margin-right: 10px; border: 1px solid black; border-radius: 5px;">
+        margin: 10px; margin-right: 10px; border: 1px solid black; border-radius: 5px;font-family: Oranienbaum;">
             <p style="text-align: center; margin-top: 10px; margin-bottom: 15px; margin-right: 25px; margin-left: 25px; font-size: 25px;">
                 The AI component of Chesster was developed through understanding written AI code, 
                 making adjustments, and using it to program the LED and buttons on the board.
             </p>
             <p style="text-align: center; margin-top: 15px auto; margin-bottom: 10px; margin-right: 40px; margin-left: 40px; font-size: 25px;">
                 For more information about our software, 
-                see the chessboard below. Click on the labels in the white squares to learn more.
+                see the chessboard below. Click on the labels in the cream-colored squares to learn more.
             </p>
         </div>
     </div>
@@ -142,26 +143,29 @@
     <br>
     </div>
     <div class="grid_container" style=
-    "background-color: #c99885; border: 2px solid black; margin-left:auto; margin-right:auto; width: 1250px; height: 1250px; border-radius: 5px;
+    "background-color: #c99885; border: 2px solid black; margin-left:auto; margin-right:auto; width: 1150px; height: 1150px; border-radius: 5px;
     padding: 5px;">
-            <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+            <div class="container" style="background-color: #dbbfb3; border: 2px solid black; border-radius: 5px;">
                 <div id="overlayOne" onclick="off1()" style=
                 "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
                     <div id="text" style="margin: 3px;">
                         All the code is written in C++ for the Arduino. 
-                        To send the code to the Arduino, we use the <a href="https://www.arduino.cc/en/software" style="text-underline-position: under;"> Arduino IDE </a> 
+                        To send the code to the Arduino, we use the <a href="https://www.arduino.cc/en/software" 
+                        style="border-bottom: 1px blue solid; color: blue;"> Arduino IDE </a> 
                     </div>
                     </div>
                     
                     <div style="text-align: center;">
-                    <button id="button1" style="font-family: Oranienbaum; font-size: 3.5em; font-weight: bold; 
-                    background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                    <button id="button1" style="font-family: Oranienbaum; font-size: xx-large; font-weight: lighter; 
+                    background-color: #f0d8d2;border:2px solid black; border-radius: 5px;"
                         onclick="on1()"><p style="margin: 10px 35px;">Code</p></button>
                     </div>
                     <script>
                     function on1() {
                         document.getElementById("overlayOne").style.display = "block";
                         document.getElementById("button1").style.display = "none";
+
+
                     }
                     
                     function off1() {
@@ -178,12 +182,9 @@
             <div class="desc-fadebox" style="width:100%">
                 <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/LED-Indices.png?v=1680673109039" style="width:100%; height: 100%; align-items: center; border-radius: 3px;">
                 <div class="desc-overlay" style="width:100%; height:100%;">
-                    <div style="font-size: 16px; color:white">
-                        The AI we're using is created by <a href="https://home.hccnet.nl/h.g.muller/max-src2.html" style="color:white;"> H.G. Muller </a> and ported to the Arduino by Diego Cueva. This AI was preferred because of its small size (< 2kb) which allowed us not to overload the Arduino's memory causing crashing errors.
-                        The chess AI utilizes the minimax algorithm that looks ahead at each piece's moves and scores them based on 
-                        how much of a positional or material advantage that the move gains, and then returns the most optimal move. 
-                         In order to cut the search for the most optimal move down, the algorithm uses Alpha-Beta pruning which avoids checking moves and branches that are already worse than the current searched moves.
-                         The chess AI checks for valid/invalid moves and winning/losing the game which we display to the user through the use of LEDs  
+                    <div class="imgcap">
+                        Here is a drawing of our LED mapping. The indexing allowed us to implement our LEDs as a one row array in our software. 
+                     
                     </div>
               </div>
             </div>
@@ -193,21 +194,26 @@
 
         </div>
 
-	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+	    <div class="container" style="background-color: #dbbfb3; border: 2px solid black; border-radius: 5px;">
             <div id="overlayTwo" onclick="off2()" style=
-            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
-                <div id="text" style="margin: 3px;">
-                     The AI we're using is created by <a href="https://home.hccnet.nl/h.g.muller/max-src2.html"> H.G. Muller</a> and ported to the Arduino by Diego Cueva. This AI was preferred because of its small size (< 2kb) which allowed us not to overload the Arduino's memory causing crashing errors. 
-                    The chess AI utilizes the minimax algorithm that looks ahead at each piece's moves and scores them based on 
-                    how much of a positional or material advantage that the move gains, and then returns the most optimal move. </li>
-                    In order to cut the search for the most optimal move down, the algorithm uses Alpha-Beta pruning which avoids checking moves and branches that are already worse than the current searched moves.
-                     The chess AI checks for valid/invalid moves and winning/losing the game which we display to the user through the use of LEDs 
+            " display:none;position: fixed; z-index: 999;">
+                <div class="overlaylst1" style="margin: 5px;font-size: 14px;">
+                    <ul>
+                        <li> The AI we're using is created by <a style="color:blue;border-bottom: 1px blue solid;" href="https://home.hccnet.nl/h.g.muller/max-src2.html">H.G. Muller </a> and ported to the Arduino by Diego Cueva. This AI was preferred because of its small size (< 2kb) which allowed us not to overload the Arduino's memory causing crashing errors. </li>
+                        <br>
+                        <li> The chess AI utilizes the minimax algorithm that looks ahead at each piece's moves and scores them based on
+                            how much of a positional or material advantage that the move gains, and then returns the most optimal move. </li>
+                        <br>
+                        <li> In order to cut the search for the most optimal move down, the algorithm uses Alpha-Beta pruning which avoids checking moves and branches that are already worse than the current searched moves.</li>
+                        <br>
+                        <li> The chess AI checks for valid/invalid moves and winning/losing the game which we display to the user through the use of LEDs </li>
+                    </ul>
                 </div>
               </div>
               
               <div style="text-align: center;">
-                <button id="button2" style="font-family: Oranienbaum; font-size: 3.5em; font-weight: bold; 
-                background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                <button id="button2" style="font-family: Oranienbaum; font-size: xx-large; font-weight: lighter; 
+                    background-color: #f0d8d2;border:2px solid black; border-radius: 5px;"
                  onclick="on2()"><p style="margin: 10px 35px;">Chess AI</p></button>
               </div>
               <script>
@@ -228,10 +234,8 @@
             <div class="desc-fadebox" style="width:100%">
                 <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/Screen%20Shot%202023-04-04%20at%204.22.31%20PM.png?v=1680673114425" style="width:100%; height: 100%; border-radius: 3px;">
                 <div class="desc-overlay" style="width:100%; height:100%;">
-                    <div style="font-size: 25px; color:white">
-                        We used the <a href="https://fastled.io" style="color:white;"> FastLED </a> library to control our LEDs and light them up to different colors. 
-                        The LEDs are in pairs of 2 under each square, skipping 3 after every row to account for physical design. 
-                        We used the below mapping of coordinates to LEDs to know which LEDs to turn on for specific moves. For example if we wanted to light up square A8 we would need to turn on LEDS 133 and 134.  
+                    <div class="imgcap">
+                       Here is a map of our board indexes. It corresponds with our LEX map. 
                     </div>
               </div>
             </div>
@@ -240,19 +244,23 @@
             </div>
         </div>
 
-	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+	    <div class="container" style="background-color: #dbbfb3; border: 2px solid black; border-radius: 5px;">
             <div id="overlayThree" onclick="off3()" style=
-            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
-                <div id="text" style="margin: 3px;">
-                    We used the <a href="https://fastled.io">FastLED</a> library to control our LEDs and light them up to different colors. 
-                    The LEDs are in pairs of 2 under each square, skipping 3 after every row to account for physical design.
-                     We used the below mapping of coordinates to LEDs to know which LEDs to turn on for specific moves. For example if we wanted to light up square A8 we would need to turn on LEDS 133 and 134. 
+            "display: none; position: fixed; z-index: 999;">
+                <div class="overlaylst1" style="margin: 5px;font-size: 17px;margin-top: 30px;">
+                    <ul>
+                        <li> We used the <a style="color:blue;border-bottom: 1px blue solid;"href="https://fastled.io"> FastLED </a> library to control our LEDs and light them up to different colors. </li>
+                        <br>
+                        <li> The LEDs are in pairs of 2 under each square, skipping 3 after every row to account for physical design. </li>
+                        <br>
+                        <li> We used the below mapping of coordinates to LEDs to know which LEDs to turn on for specific moves. For example if we wanted to light up square A8 we would need to turn on LEDS 133 and 134. </li>
+                    </ul>
                 </div>
               </div>
               
               <div style="text-align: center;">
-                <button id="button3" style="font-family: Oranienbaum; font-size: 3.5em; font-weight: bold; 
-                background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                <button id="button3" style="font-family: Oranienbaum; font-size: xx-large; font-weight: lighter; 
+                    background-color: #f0d8d2;border:2px solid black; border-radius: 5px;"
                  onclick="on3()"><p style="margin: 10px 35px;">LEDs</p></button>
               </div>
               <script>
@@ -274,8 +282,8 @@
             <div class="desc-fadebox" style="width:100%">
                 <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/comp-board.png?v=1680673097244" style="width:100%; height: 100%; border-radius: 3px;">
                 <div class="desc-overlay" style="width:100%; height:100%;">
-                    <div style="font-size: 25px; color:white">
-                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    <div class="imgcap">
+                    Here is a photo of our software being tested with Chesster's electrical circuit.
                     </div>
               </div>
             </div>
@@ -284,19 +292,23 @@
             </div>
         </div>
 
-	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+	    <div class="container" style="background-color: #dbbfb3; border: 2px solid black; border-radius: 5px;">
             <div id="overlayFour" onclick="off4()" style=
-            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
-                <div id="text" style="margin: 3px;">
-                    The 16 to 1 multiplexers can be turned on and off by sending a signal through the Arduino. By "shutting off" three of the multiplexers, we can read all the inputs from one multiplexer to get each piece's locations. 
-                    These inputs are then put into an array and given to the AI to output a move.
-                    The code is constantly looping to check for button inputs. Once it detects the end turn button, the rest of the code runs. 
+            "display: none; position: fixed; z-index: 999;">
+                <div id="overlaylst1" style="margin: 5px;font-size: 18px;margin-top: 50px;">
+                    <ul>
+                        <li> The 16 to 1 multiplexers can be turned on and off by sending a signal through the Arduino. By "shutting off" three of the multiplexers, we can read all the inputs from one multiplexer to get each piece's locations. </li>
+                        <br>
+                        <li> These inputs are then put into an array and given to the AI to output a move. </li>
+                        <br>
+                        <li> The code is constantly looping to check for button inputs. Once it detects the end turn button, the rest of the code runs. </li>
+                    </ul>
                 </div>
               </div>
               
               <div style="text-align: center;">
-                <button id="button4" style="font-family: Oranienbaum; font-size: 2.5em;
-                font-weight: bold;background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                <button id="button4" style="font-family: Oranienbaum; font-size: xx-large;
+                font-weight: lighter;background-color: #f0d8d2;border:2px solid black; border-radius: 5px;"
                  onclick="on4()"><p style="margin: 12px 35px; white-space: pre-line; text-align: center;">Reading Chess
                 Input</p></button>
               </div>
@@ -319,8 +331,8 @@
             <div class="desc-fadebox" style="width:100%">
                 <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/Justin-Mylinh.png?v=1680673106913" style="width:100%; height: 100%; border-radius: 3px;">
                 <div class="desc-overlay" style="width:100%; height:100%;">
-                    <div style="font-size: 25px; color:white">
-                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    <div class="imgcap" sytle="">
+                    Mylinh and Justin hard at work testing software.
                     </div>
               </div>
             </div>
@@ -330,7 +342,7 @@
 
         </div>
 
-	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+	    <div class="container" style="background-color: #dbbfb3; border: 2px solid black; border-radius: 5px;">
             <div id="overlayFive" onclick="off5()" style=
             "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
                 <div id="text" style="margin: 3px;">
@@ -339,7 +351,7 @@
               
               <div style="text-align: center;">
                 <button id="button5" style="font-family: Oranienbaum; text-align: center; white-space: pre-line; 
-                font-size: 2.5em; font-weight: bold;;background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                font-size: xx-large; font-weight: lighter;background-color: #f0d8d2;border:2px solid black; border-radius: 5px;"
                  onclick="on5()"><p style="margin: 12px 35px; white-space: pre-line; text-align: center;">Version Control
                     Github</p></button>
               </div>
