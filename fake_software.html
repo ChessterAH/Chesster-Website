@@ -121,7 +121,7 @@
 
 	    <div class="container" style="background-color: white; border: 2px solid black;">
             Chess AI
-            <img src="path/to/image3.jpg">
+            
         </div>
 
 	    <div class="container" style="background-color: #f3e4dd; border: 2px solid black;">
@@ -130,7 +130,7 @@
 
 	    <div class="container" style="background-color: white; border: 2px solid black;">
             LEDs
-            <img src="path/to/image5.jpg">
+            
         </div>
 
 	    <div class="container" style="background-color: #f3e4dd; border: 2px solid black;">
@@ -139,14 +139,34 @@
         </div>
 
 	    <div class="container" style="background-color: white; border: 2px solid black;">
-            Reading Chess Input<img src="path/to/image7.jpg">
+            Reading Chess Input
         </div>
 
 	    <div class="container" style="background-color: #f3e4dd; border: 2px solid black;">
             
             <img src="./software-pics/Justin-Mylinh.png"></div>
 
-	    <div class="container" style="background-color: white; border: 2px solid black;">Version Control: Github<img src="path/to/image9.jpg"></div>
+	    <div class="container" style="background-color: white; border: 2px solid black;">
+            <div id="overlay" onclick="off()">
+                <div id="text">We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
+              </div>
+              
+              <div style="text-align: center;">
+                <button id="button" style="font-family: Oranienbaum; font-size: x-large; font-weight: bold;;background-color: #FBF7F6;border:2px solid black"
+                 onclick="on()">Player moves chesspiece with a magnetic bottom onto a square.</button>
+              </div>
+              <script>
+                function on() {
+                  document.getElementById("overlay").style.display = "block";
+                }
+                
+                function off() {
+                  document.getElementById("overlay").style.display = "none";
+                }
+                
+                
+                </script>
+        </div>
     </div>
     </div>
     <br>
