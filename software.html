@@ -145,31 +145,32 @@
     <div class="grid_container" style=
     "background-color: #c99885; border: 2px solid black; margin-left:auto; margin-right:auto; width: 1250px; height: 1250px; border-radius: 5px;
     padding: 5px;">
-        <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
-            <div id="overlay" onclick="off1()" style=
-            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
-                <div id="text" style="margin: 3px;">
-                    We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
-              </div>
-              
-              <div style="text-align: center;">
-                <button id="button1" style="font-family: Oranienbaum; font-size: 3.5em; 
-                font-weight: lighter; background-color: #FBF7F6; border:2px solid black; margin: auto; border-radius: 5px;"
-                 onclick="on1()"><p style="margin: 10px 35px;">Code</p></button>
-              </div>
-              <script>
-                function on1() {
-                  document.getElementById("overlay1").style.display = "block";
-                  document.getElementById("button1").style.display = "none";
-                }
-                
-                function off1() {
-                  document.getElementById("overlay1").style.display = "none";
-                  document.getElementById("button1").style.display = "block";
-                }
-                
-                </script>
+            <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+                <div id="overlayOne" onclick="off1()" style=
+                "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
+                    <div id="text" style="margin: 3px;">
+                        We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                    <button id="button1" style="font-family: Oranienbaum; font-size: 3.5em; font-weight: bold; 
+                    background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                        onclick="on1()"><p style="margin: 10px 35px;">Code</p></button>
+                    </div>
+                    <script>
+                    function on1() {
+                        document.getElementById("overlayOne").style.display = "block";
+                        document.getElementById("button1").style.display = "none";
+                    }
+                    
+                    function off1() {
+                        document.getElementById("overlayOne").style.display = "none";
+                        document.getElementById("button1").style.display = "block";
+                    }
+                    
+                    </script>
             </div>
+        
 
 	    <div class="container">
             
@@ -192,7 +193,7 @@
         </div>
 
 	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
-            <div id="overlay2" onclick="off2()" style=
+            <div id="overlayTwo" onclick="off2()" style=
             "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
                 <div id="text" style="margin: 3px;">
                     We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
@@ -205,12 +206,12 @@
               </div>
               <script>
                 function on2() {
-                  document.getElementById("overlay2").style.display = "block";
+                  document.getElementById("overlayTwo").style.display = "block";
                   document.getElementById("button2").style.display = "none";
                 }
                 
                 function off2() {
-                  document.getElementById("overlay2").style.display = "none";
+                  document.getElementById("overlayTwo").style.display = "none";
                   document.getElementById("button2").style.display = "block";
                 }
                 
@@ -222,7 +223,7 @@
                 <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/Screen%20Shot%202023-04-04%20at%204.22.31%20PM.png?v=1680673114425" style="width:100%; height: 100%; border-radius: 3px;">
                 <div class="desc-overlay" style="width:100%; height:100%;">
                     <div style="font-size: 25px; color:white">
-                        We used the <a href="https://fastled.io" style="color:white"> FastLED </a> library to control our LEDs and light them up to different colors. 
+                        We used the <a href="https://fastled.io" style="color:white;"> FastLED </a> library to control our LEDs and light them up to different colors. 
                         The LEDs are in pairs of 2 under each square, skipping 3 after every row to account for physical design. 
                         We used the below mapping of coordinates to LEDs to know which LEDs to turn on for specific moves. For example if we wanted to light up square A8 we would need to turn on LEDS 133 and 134.  
                     </div>
@@ -234,7 +235,7 @@
         </div>
 
 	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
-            <div id="overlay3" onclick="off3()" style=
+            <div id="overlayThree" onclick="off3()" style=
             "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
                 <div id="text" style="margin: 3px;">
                     We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
@@ -247,12 +248,12 @@
               </div>
               <script>
                 function on3() {
-                  document.getElementById("overlay3").style.display = "block";
+                  document.getElementById("overlayThree").style.display = "block";
                   document.getElementById("button3").style.display = "none";
                 }
                 
                 function off3() {
-                  document.getElementById("overlay3").style.display = "none";
+                  document.getElementById("overlayThree").style.display = "none";
                   document.getElementById("button3").style.display = "block";
                 }
                 
@@ -275,7 +276,7 @@
         </div>
 
 	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
-            <div id="overlay4" onclick="off4()" style=
+            <div id="overlayFour" onclick="off4()" style=
             "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
                 <div id="text" style="margin: 3px;">
                     We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
@@ -289,12 +290,12 @@
               </div>
               <script>
                 function on4() {
-                  document.getElementById("overlay4").style.display = "block";
+                  document.getElementById("overlayFour").style.display = "block";
                   document.getElementById("button4").style.display = "none";
                 }
                 
                 function off4() {
-                  document.getElementById("overlay4").style.display = "none";
+                  document.getElementById("overlayFour").style.display = "none";
                   document.getElementById("button4").style.display = "block";
                 }
                 
@@ -318,7 +319,7 @@
         </div>
 
 	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
-            <div id="overlay5" onclick="off5()" style=
+            <div id="overlayFive" onclick="off5()" style=
             "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
                 <div id="text" style="margin: 3px;">
                     We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
@@ -332,12 +333,12 @@
               </div>
               <script>
                 function on5() {
-                  document.getElementById("overlay5").style.display = "block";
+                  document.getElementById("overlayFive").style.display = "block";
                   document.getElementById("button5").style.display = "none";
                 }
                 
                 function off5() {
-                  document.getElementById("overlay5").style.display = "none";
+                  document.getElementById("overlayFive").style.display = "none";
                   document.getElementById("button5").style.display = "block";
                 }
                 

@@ -44,6 +44,54 @@ table, td {border:2px solid black;}
     cursor: pointer;
     border: 1px black solid;
   }
+#overlayOne {
+  position: absolute;
+  display: none;
+  max-width: 196px;
+  height: 196px;
+  margin-top: -5vh;
+  z-index: 2;
+  cursor: pointer;
+}
+  
+#overlayTwo {
+  position: absolute;
+  display: none;
+  max-width: 196px;
+  height: 196px;
+  margin-top: -5vh;
+  z-index: 2;
+  cursor: pointer;
+}
+#overlayThree {
+  position: absolute;
+  display: none;
+  max-width: 196px;
+  height: 196px;
+  margin-top: -5vh;
+  z-index: 2;
+  cursor: pointer;
+}
+#overlayFour {
+  position: absolute;
+  display: none;
+  max-width: 196px;
+  height: 196px;
+  margin-top: -5vh;
+  z-index: 2;
+  cursor: pointer;
+}
+#overlayFive {
+  position: absolute;
+  display: none;
+  max-width: 196px;
+  height: 196px;
+  margin-top: -5vh;
+  z-index: 2;
+  cursor: pointer;
+}
+    
+
   
   #text2{
     position: relative;
