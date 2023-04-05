@@ -64,6 +64,59 @@
       font-size: large;
       font-weight: normal;
     }
+    .slider {
+      width: 500px;
+      height: 400px;
+      background-color: #dfc9c0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .image-container {
+      width: 1500px;
+      background-color: pink;
+      height: 300px;
+      clear: both;
+      position: relative;
+      -webkit-transition: left 1s;
+      -moz-transition: left 1s;
+      -o-transition: left 1s;
+      transition: left 1s;
+    }
+    .slide {
+      float: left;
+      margin: 0px;
+      padding: 0px;
+      position: relative;
+    }
+    #slide-1:target ~ .image-container {
+      left: 0px;
+    }
+    #slide-2:target ~ .image-container {
+      left: -500px;
+    }
+    #slide-3:target ~ .image-container {
+      left: 0px;
+    }
+    #slide-4:target ~ .image-container {
+      left: -500px;
+    }
+    #slide-5:target ~ .image-container {
+      left: -1000px;
+    }
+    .buttons {
+      position: relative;
+      top: -30px;
+    }
+    .buttons a {
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      border-radius: 50px;
+      background-color: rgb(110, 48, 17);
+    }
   </style>
 
   <body
@@ -127,7 +180,7 @@
           "
         >
           CHESSTER's plywood board can be split into two parts: The top and
-          bottom part of the boad's box-like body, and the 8x8 cubicle grid that
+          bottom part of the board's box-like body, and the 8x8 cubicle grid that
           lies inside the body.
         </th>
         <tr>
@@ -136,7 +189,7 @@
         </tr>
         <tr>
           <td class="uncolored">
-            <div class="flip-box">
+            <!--<div class="flip-box">
               <div class="flip-box-inner">
                 <div class="flip-box-front">
                   <img
@@ -151,10 +204,23 @@
                   />
                 </div>
               </div>
+            </div> -->
+          <!--first cad slideshow-->
+          <div class="slider">
+            <span id="slide-1"></span>
+            <span id="slide-2"></span>
+            <div class="image-container">
+              <img src="https://cdn.glitch.global/7be31afe-d98d-4bec-8a83-8dc9c85a230f/board%20cad.PNG?v=1680695907821" class="slide" width="500" height="300" />
+              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/chessboard%20box%20(1).PNG?v=1680394365107" class="slide" width="500" height="300" />
             </div>
+          </div>
+          <div class="buttons">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+          </div>
           </td>
 
-          <!-- <div id="overlay2" onclick="off2()">
+           <!--<div id="overlay2" onclick="off2()">
               <div id="text2">Flipper!</div>
             </div>
 
@@ -186,7 +252,7 @@
             </script> -->
 
           <td class="colored">
-            <div class="flip-box">
+            <!--<div class="flip-box">
               <div class="flip-box-inner">
                 <div class="flip-box-front">
                   <img
@@ -201,7 +267,7 @@
                   />
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- <div id="overlay4" onclick="off4()">
               <div style="height: 200px" id="text4">Flipper2</div>
@@ -235,11 +301,51 @@
                 document.getElementById("overlay4").style.display = "none";
               }
             </script> -->
+          
+          <!--second cad slideshow-->
+          <div class="slider">
+            <span id="slide-3"></span>
+            <span id="slide-4"></span>
+            <span id="slide-5"></span>
+            <div class="image-container">
+              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/divider%20cad.jpeg?v=1680394235819" class="slide" width="500" height="300" />
+              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/Chessboard%20piece%20bottom%20(1).PNG?v=1680394375178" class="slide" width="500" height="300" />
+              <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/Chessboard%20Piece%20side%20view%20(1).PNG?v=1680394357915" class="slide" width="500" height="300" />
+            </div>
+          </div>
+          <div class="buttons">
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+            <a href="#slide-5"></a>
+          </div>
           </td>
         </tr>
         <tr>
-          <td class="colored" style="font-size: xx-large">[CAPTION]</td>
-          <td class="colored" style="font-size: xx-large">[CAPTION]</td>
+          <td class="colored" style="font-size: large">
+            <p>
+              (1) CAD of the 89.5cm x 60cm top part of Chesster. It includes the 52cm x 52cm chessboard and space along the edges for putting captured 
+              chess pieces. This part and all other mechanical parts were crafted from plywood when we brought Chesster to life.
+            </p> 
+            <p>
+              (2) CAD of the box that makes up Chesster's bottom. Here is where electrical components and an 8x8 square grid structure are stored. 
+              The box measures 89.5cm x 60cm x 9cm.
+            </p>
+          </td>
+          <td class="colored" style="font-size: large">
+            <p>
+              (1) CAD of one of the divider panels that make up the underlying chessboard grid. 14 of these panels were laser-cut and 
+              assembled into a grid to make Chesster.
+            </p> 
+            <p>
+              (2) Originally, we had planned to 3D print each individual cubicle for the grid, and to assemble them together; we switched to 
+              laser cutting dividers when we realized that wouldn't be feasible. Here is the CAD for the cubicles. It includes 4 drilled holes in 
+              the top corners so that the LED light would shine through. The structure in the center represents the reed sensor and other electrical components.
+            </p>
+            <p>
+              (3) CAD of one of the side views of the cubicle prototype. One can see the drilled holes on the surface more clearly. The surface 
+              would have been what made up the chessboard on Chesster's top part.
+            </p>
+          </td>
           <script>
             function on6() {
               document.getElementById("overlay6").style.display = "block";
@@ -434,3 +540,4 @@
     </div>
   </body>
 </html>
+
