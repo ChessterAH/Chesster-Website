@@ -1,58 +1,110 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en" dir="ltr">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap">
+        <link href="style2.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
         <title>
             Chesster Software Components
         </title>
     </head>
 
     <style>
-        /*navigation bar*/
+        
         .nav_bar{
         list-style-type: none;
         height: 10vh;
         margin: 0;
-        padding: 1px 10px;
+        padding: 10px 10px;
         background-color: #FBF7F6;
         font-family: "Oranienbaum";        
         }
+        
+        .nav{
+            float: right;
+        }
 
-    .nav{
-        float: right;
-    }
-    .nav_link{
-        display: inline-block;
-        padding: 15px;
-        text-decoration: none;
-        color: black;
-        font-size: xx-large;
-        margin: 8px;
-        color:black;
-    }
-    /*footer style*/
-    footer{
-        text-align: center;
-        padding: 10px 10px;
-        background-color: #FBF7F6;
-        font-family: "Oranienbaum";
-        font-size: larger;
-        border: 2px solid black;
-    }
-    h2{
-        color: darkred;
-    }
-    .update{
+        footer{
+            text-align: center;
+            padding: 10px 10px;
+            background-color: #FBF7F6;
+            font-family: "Oranienbaum";
+            font-size: large;
+            border: 2px solid black;
+        }
+        
+        a{
+            text-decoration: none;
+            margin: 8px;
+            color:black;
+        }
+
+        .update{
             padding: 10px;
             background-color: white;
-            border: 2px solid black;
             font-family: "Oranienbaum";
+        }   
+    
+        h2{
+            color: darkred;
+        }
+        
+        .container {
+			width: calc(33.33% - 10px);
+			height: calc(33.33% - 10px);
+			margin: 5px;
+			float: left;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: black;
+            filter: drop-shadow(1px 1px 2px black);
+            border: 2px solid black;
+            border-radius: 5px;
+            box-sizing: border-box;
+		}
+
+		.container img {
+            display: block;
+			
+			object-fit: cover;
+		}
+
+        .desc-fadebox {
+            height: 100%;
+            width: 100%;
+        }
+        .caption {
+           
+            font-size: 25px;
+            
+        }
+        .desc-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 98%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(48,48,48, 0.7);
+            padding: 1.5vw;
+            text-align: left;
+            overflow-y: scroll;
+
+
+        }
+
+        .desc-fadebox:hover .desc-overlay {
+            opacity: 1;
         }
     </style>
  
  <body style="background-image: url('https://cdn.glitch.global/3ae0dc6f-3e01-454a-9279-009dea2afd82/brown%20background.png?v=1679305373447'); 
- background-repeat: repeat; background-attachment: fixed; overflow: scroll; width: auto; height: auto;">
+ background-repeat: repeat; background-attachment: fixed; width: auto; height: auto;">
      <!--Navigation Bar-->
      <ul style= "border: 2px solid black" class="nav_bar">
         <li class="nav"><a class = "nav_link" href= "about.html">About</a></li>
@@ -63,59 +115,249 @@
         <li class="nav"><a class = "nav_link" href= "index.html">Home</a></li>
         <li style="float: left"><a class = "nav_link" href= "index.html">Chesster</a></li>
      </ul>
- <!--Software Title Card-->
- <div style="text-align: center;">
-    <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/software%20title.png?v=1679505483075" alt="projtitle"
-    style="width: 855px; height: 164px;
-    padding: 150px 275px; display: inline-block;" >
-</div>
+    <!--Software Title Card-->
+    <div style="text-align: center;">
+        <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/software%20title.png?v=1679505483075" alt="projtitle"
+        style="width: 855px; height: 164px;
+        margin-top: 50px; margin-bottom: 50px; display: inline-block;">
+    </div>
 
-<div class="update">
+    <div class="software_header" 
+    style="margin-left:auto; margin-right: auto; background-color: #c99885; border: 1px solid black; width: 1100px; border-radius: 5px;">
+        <div class="software_head_text"
+        style="background-color: #f3e4dd; width: calc(100%-30px); height: 100%;
+        margin: 10px; margin-right: 10px; border: 1px solid black; border-radius: 5px;">
+            <p style="text-align: center; margin-top: 10px; margin-bottom: 15px; margin-right: 25px; margin-left: 25px; font-size: 25px;">
+                The AI component of Chesster was developed through understanding written AI code, 
+                making adjustments, and using it to program the LED and buttons on the board.
+            </p>
+            <p style="text-align: center; margin-top: 15px auto; margin-bottom: 10px; margin-right: 40px; margin-left: 40px; font-size: 25px;">
+                For more information about our software, 
+                see the chessboard below. Click on the labels in the white squares to learn more.
+            </p>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    </div>
+    <div class="grid_container" style=
+    "background-color: #c99885; border: 2px solid black; margin-left:auto; margin-right:auto; width: 1250px; height: 1250px; border-radius: 5px;
+    padding: 5px;">
+        <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+            <div id="overlay" onclick="off1()" style=
+            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
+                <div id="text" style="margin: 3px;">
+                    We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
+              </div>
+              
+              <div style="text-align: center;">
+                <button id="button1" style="font-family: Oranienbaum; font-size: 3.5em; 
+                font-weight: lighter; background-color: #FBF7F6; border:2px solid black; margin: auto; border-radius: 5px;"
+                 onclick="on1()"><p style="margin: 10px 35px;">Code</p></button>
+              </div>
+              <script>
+                function on1() {
+                  document.getElementById("overlay1").style.display = "block";
+                  document.getElementById("button1").style.display = "none";
+                }
+                
+                function off1() {
+                  document.getElementById("overlay1").style.display = "none";
+                  document.getElementById("button1").style.display = "block";
+                }
+                
+                </script>
+            </div>
 
-    <h2> Code </h2>
-    <ul> 
-        <li> All the code is written in C++ for the Arduino. </li>
-        <li> To send the code to the Arduino, we use the <a href="https://www.arduino.cc/en/software"> Arduino IDE </a> </li>
-    </ul>
-    <h2> Chess AI </h2>
-    <ul> 
-        <li> The AI we're using is created by <a href="https://home.hccnet.nl/h.g.muller/max-src2.html"> H.G. Muller </a> and ported to the Arduino by Diego Cueva. This AI was preferred because of its small size (< 2kb) which allowed us not to overload the Arduino's memory causing crashing errors. </li>
-        <li> The chess AI utilizes the minimax algorithm that looks ahead at each piece's moves and scores them based on 
-            how much of a positional or material advantage that the move gains, and then returns the most optimal move. </li>
-        <li> In order to cut the search for the most optimal move down, the algorithm uses Alpha-Beta pruning which avoids checking moves and branches that are already worse than the current searched moves.</li>
-        <li> The chess AI checks for valid/invalid moves and winning/losing the game which we display to the user through the use of LEDs </li>
-    </ul>
+	    <div class="container">
+            
+            <div class="desc-fadebox" style="width:100%">
+                <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/LED-Indices.png?v=1680673109039" style="width:100%; height: 100%; align-items: center; border-radius: 3px;">
+                <div class="desc-overlay" style="width:100%; height:100%;">
+                    <div style="font-size: 16px; color:white">
+                        The AI we're using is created by <a href="https://home.hccnet.nl/h.g.muller/max-src2.html" style="color:white;"> H.G. Muller </a> and ported to the Arduino by Diego Cueva. This AI was preferred because of its small size (< 2kb) which allowed us not to overload the Arduino's memory causing crashing errors.
+                        The chess AI utilizes the minimax algorithm that looks ahead at each piece's moves and scores them based on 
+                        how much of a positional or material advantage that the move gains, and then returns the most optimal move. 
+                         In order to cut the search for the most optimal move down, the algorithm uses Alpha-Beta pruning which avoids checking moves and branches that are already worse than the current searched moves.
+                         The chess AI checks for valid/invalid moves and winning/losing the game which we display to the user through the use of LEDs  
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
 
-    <h2> LEDs </h2>
-    <ul>
-        <li> We used the <a href="https://fastled.io"> FastLED </a> library to control our LEDs and light them up to different colors. </li>
-        <li> The LEDs are in pairs of 2 under each square, skipping 3 after every row to account for physical design. </li>
-        <li> We used the below mapping of coordinates to LEDs to know which LEDs to turn on for specific moves. For example if we wanted to light up square A8 we would need to turn on LEDS 133 and 134. </li>
-        <br>
-        <img src="led_mapping.jpg" style="width:800px"> 
-    </ul>
+        </div>
 
-    <h2> Reading Chess Input </h2>
-    <ul>
-        <li> The 16 to 1 multiplexers can be turned on and off by sending a signal through the Arduino. By "shutting off" three of the multiplexers, we can read all the inputs from one multiplexer to get each piece's locations. </li>
-        <li> These inputs are then put into an array and given to the AI to output a move. </li>
-        <li> The code is constantly looping to check for button inputs. Once it detects the end turn button, the rest of the code runs. </li>
-    </ul>
+	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+            <div id="overlay2" onclick="off2()" style=
+            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
+                <div id="text" style="margin: 3px;">
+                    We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
+              </div>
+              
+              <div style="text-align: center;">
+                <button id="button2" style="font-family: Oranienbaum; font-size: 3.5em; font-weight: bold; 
+                background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                 onclick="on2()"><p style="margin: 10px 35px;">Chess AI</p></button>
+              </div>
+              <script>
+                function on2() {
+                  document.getElementById("overlay2").style.display = "block";
+                  document.getElementById("button2").style.display = "none";
+                }
+                
+                function off2() {
+                  document.getElementById("overlay2").style.display = "none";
+                  document.getElementById("button2").style.display = "block";
+                }
+                
+                </script>
+        </div>
 
-    <h2> Version Control: Github </h2>
-    <ul>
-        <li> We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</li>
-    </ul>
-</div>
-<!--Footer-->
-<footer>
-    <a href= "about.html">About</a>
-    <a href= "timeline.html">Process</a>
-    <a href= "mechanical.html">Mechanical</a>
-    <a href= "electrical.html">Electrical</a>
-    <a href= "software.html">Software</a>
-    <a href= "index.html">Home</a>
-</footer>
+	    <div class="container">
+            <div class="desc-fadebox" style="width:100%">
+                <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/Screen%20Shot%202023-04-04%20at%204.22.31%20PM.png?v=1680673114425" style="width:100%; height: 100%; border-radius: 3px;">
+                <div class="desc-overlay" style="width:100%; height:100%;">
+                    <div style="font-size: 25px; color:white">
+                        We used the <a href="https://fastled.io" style="color:white"> FastLED </a> library to control our LEDs and light them up to different colors. 
+                        The LEDs are in pairs of 2 under each square, skipping 3 after every row to account for physical design. 
+                        We used the below mapping of coordinates to LEDs to know which LEDs to turn on for specific moves. For example if we wanted to light up square A8 we would need to turn on LEDS 133 and 134.  
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
+        </div>
+
+	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+            <div id="overlay3" onclick="off3()" style=
+            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
+                <div id="text" style="margin: 3px;">
+                    We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
+              </div>
+              
+              <div style="text-align: center;">
+                <button id="button3" style="font-family: Oranienbaum; font-size: 3.5em; font-weight: bold; 
+                background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                 onclick="on3()"><p style="margin: 10px 35px;">LEDs</p></button>
+              </div>
+              <script>
+                function on3() {
+                  document.getElementById("overlay3").style.display = "block";
+                  document.getElementById("button3").style.display = "none";
+                }
+                
+                function off3() {
+                  document.getElementById("overlay3").style.display = "none";
+                  document.getElementById("button3").style.display = "block";
+                }
+                
+                </script>
+        </div>
+
+	    <div class="container">
+            
+            <div class="desc-fadebox" style="width:100%">
+                <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/comp-board.png?v=1680673097244" style="width:100%; height: 100%; border-radius: 3px;">
+                <div class="desc-overlay" style="width:100%; height:100%;">
+                    <div style="font-size: 25px; color:white">
+                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
+        </div>
+
+	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+            <div id="overlay4" onclick="off4()" style=
+            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
+                <div id="text" style="margin: 3px;">
+                    We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
+              </div>
+              
+              <div style="text-align: center;">
+                <button id="button4" style="font-family: Oranienbaum; font-size: 2.5em;
+                font-weight: bold;background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                 onclick="on4()"><p style="margin: 12px 35px; white-space: pre-line; text-align: center;">Reading Chess
+                Input</p></button>
+              </div>
+              <script>
+                function on4() {
+                  document.getElementById("overlay4").style.display = "block";
+                  document.getElementById("button4").style.display = "none";
+                }
+                
+                function off4() {
+                  document.getElementById("overlay4").style.display = "none";
+                  document.getElementById("button4").style.display = "block";
+                }
+                
+                </script>
+        </div>
+
+	    <div class="container">
+            
+            <div class="desc-fadebox" style="width:100%">
+                <img src="https://cdn.glitch.global/206315a3-9da6-486c-94fa-663103fa21a8/Justin-Mylinh.png?v=1680673106913" style="width:100%; height: 100%; border-radius: 3px;">
+                <div class="desc-overlay" style="width:100%; height:100%;">
+                    <div style="font-size: 25px; color:white">
+                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
+
+        </div>
+
+	    <div class="container" style="background-color: white; border: 2px solid black; border-radius: 5px;">
+            <div id="overlay5" onclick="off5()" style=
+            "display: none; position: fixed; margin: auto; width: 100%; height: 50%; z-index: 999;">
+                <div id="text" style="margin: 3px;">
+                    We used two seperate githubs - one for the website, one for the code - to keep track of who makes what edits and revert back to previous stages if necessary.</div>
+              </div>
+              
+              <div style="text-align: center;">
+                <button id="button5" style="font-family: Oranienbaum; text-align: center; white-space: pre-line; 
+                font-size: 2.5em; font-weight: bold;;background-color: #FBF7F6;border:2px solid black; border-radius: 5px;"
+                 onclick="on5()"><p style="margin: 12px 35px; white-space: pre-line; text-align: center;">Version Control
+                    Github</p></button>
+              </div>
+              <script>
+                function on5() {
+                  document.getElementById("overlay5").style.display = "block";
+                  document.getElementById("button5").style.display = "none";
+                }
+                
+                function off5() {
+                  document.getElementById("overlay5").style.display = "none";
+                  document.getElementById("button5").style.display = "block";
+                }
+                
+                </script>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    </div>
+<!--Footer-->   
+    <footer>
+        <a href= "about.html">About</a>
+        <a href= "timeline.html">Process</a>
+        <a href= "mechanical.html">Mechanical</a>
+        <a href= "electrical.html">Electrical</a>
+        <a href= "software.html">Software</a>
+        <a href= "index.html">Home</a>
+    </footer>
 </body>
 
 

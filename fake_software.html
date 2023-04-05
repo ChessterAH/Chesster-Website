@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap">
         <link href="software.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
         <title>
             Chesster Software Components
         </title>
@@ -67,6 +68,18 @@
 			max-height: 100%;
 			object-fit: contain;
 		}
+        .fadebox {
+            height: 100%;
+            width: 100%;
+        }
+        .caption {
+            color: white;
+            margin: auto;
+            vertical-align: middle;
+            
+        }
+
+        
     </style>
  
  <body style="background-image: url('https://cdn.glitch.global/3ae0dc6f-3e01-454a-9279-009dea2afd82/brown%20background.png?v=1679305373447'); 
@@ -111,11 +124,23 @@
 
             <div>Code</div>
             
+           
+            
         </div>
 
 	    <div class="container" style="background-color: #f3e4dd; border: 2px solid black;">
             
-            <img src="./software-pics/Screen Shot 2023-04-04 at 4.22.31 PM.png">
+            <div class="fadebox">
+                <img src="./software-pics/Screen Shot 2023-04-04 at 4.22.31 PM.png" style="width:100%; height: 100%; box-sizing: border-box">
+                <div class="overlay" style="width:100%; height:100%;">
+                    <div class="caption">
+                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
 
         </div>
 
@@ -125,7 +150,18 @@
         </div>
 
 	    <div class="container" style="background-color: #f3e4dd; border: 2px solid black;">
-            <img src="./software-pics/LED-Indices.png">
+          
+            <div class="fadebox">
+                <img src="./software-pics/LED-Indices.png" style="width:100%; height: 100%; box-sizing: border-box">
+                <div class="overlay" style="width:100%; height:100%;">
+                    <div class="caption">
+                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
         </div>
 
 	    <div class="container" style="background-color: white; border: 2px solid black;">
@@ -135,7 +171,18 @@
 
 	    <div class="container" style="background-color: #f3e4dd; border: 2px solid black;">
             
-            <img src="./software-pics/comp-board.png">
+
+            <div class="fadebox">
+                <img src="./software-pics/comp-board.png" style="width:100%; height: 100%; box-sizing: border-box">
+                <div class="overlay" style="width:100%; height:100%;">
+                    <div>
+                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
         </div>
 
 	    <div class="container" style="background-color: white; border: 2px solid black;">
@@ -144,7 +191,21 @@
 
 	    <div class="container" style="background-color: #f3e4dd; border: 2px solid black;">
             
-            <img src="./software-pics/Justin-Mylinh.png"></div>
+            <div class="fadebox">
+                <img src="./software-pics/Justin-Mylinh.png" style="width:100%; height: 100%; box-sizing: border-box">
+                <div class="overlay" style="width:100%; height:100%;">
+                    <div class="caption">
+                    What’s up! I’m Mylinh and I'm a second year EECS major at Berkeley. Some hobbies include playing soccer, baking yummy desserts, cooking delicious meals for my friends, and watching lots of tv shows and movies 
+                    </div>
+              </div>
+            </div>
+              <div>
+            
+            </div>
+            
+
+        </div>
+            
 
 	    <div class="container" style="background-color: white; border: 2px solid black;">
             <div id="overlay" onclick="off()">
@@ -164,6 +225,7 @@
                   document.getElementById("overlay").style.display = "none";
                 }
                 
+
                 
                 </script>
         </div>
