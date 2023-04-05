@@ -39,7 +39,7 @@
         bottom:auto;
         width:100%;
         height: fit-content;
-        margin-top: 20vh;
+        margin-top: 30vh;
     }
     a{
         text-decoration: none;
@@ -82,6 +82,12 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
           <th style="margin-left: auto;margin-right: auto; font-size: xx-large;font-family: Oranienbaum;">Electrical Flow</th>
           <th></th>
           <tr>
+            <th></th>
+            <th style="font-size: medium;font-family: Oranienbaum;font-weight: lighter;">
+              Click the chesspieces to see Chesster's electrical flow!</th>
+            <th></th>
+          </tr>
+          <tr>
             <td class="enemy"></td>
             <td class="friend">
               <div id="overlay" onclick="off()">
@@ -108,7 +114,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
           <tr>
             <td class="friend">
               <div id="overlay2" onclick="off2()">
-                <div id="text2">A reed sensor underneath the square senses the magnet's field and sends a 5 volt signal through a connected wire.</div>
+                <div id="text2">A reed sensor underneath the square senses the magnet's field and sends a 0 volt signal through a connected wire.</div>
               </div>
               
               <div style="text-align: center;">
@@ -129,7 +135,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
             <td class="enemy"></td>
             <td class="friend">
               <div id="overlay3" onclick="off3()">
-                <div id="text3">The wire carries the 5 volt signal to one of the multiplexers, which is in turn connected to the Arduino.</div>
+                <div id="text3">The wire carries the 0 volt signal to one of the multiplexers, which is in turn connected to the Arduino.</div>
               </div>
               
               <div style="text-align: center;">
@@ -151,7 +157,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
           <tr>
             <td class="enemy">
               <div id="overlay4" onclick="off4()">
-                <div id="text4">The Arduino recieves the signal, and the code within calculates which square the player should place their piece next. 
+                <div id="text4">The Arduino recieves the signal, and the Chess AI calculates which square the player should place their piece next. 
                   The code outputs the LED index of this new square.</div>
               </div>
               
@@ -198,8 +204,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
             <td class="friend"></td>
             <td class="enemy">
               <div id="overlay6" onclick="off6()">
-                <div id="text6">The LED at the new square lights up green! If the player tries to move their chesspiece to a different square,
-                  the lit up square will shine red until the chesspiece is moved back.</div>
+                <div id="text6">The LED at the new square lights up red!</div>
               </div>
               
               <div style="text-align: center;">
@@ -246,6 +251,8 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
               <li class="underline2"style="margin-left: 80px;"><b>DC 5521 input for direct powerbank connection</b></li>
               <li class="underline">12 Volt Power Bank </li>
               <li class="underline">LED Strips </li>
+              <li class="underline">Other Materials:</li>
+              <li class="underline2"style="margin-left: 80px;">Wires, Wire Clips, Male Headers, Soldering Tools, Ribbon Cables, 2 Breadboards, Buttons</li>
             </ul>
             </td>
           </tr>
@@ -293,7 +300,7 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
   </div>
 
   <div class="mySlides">
-      <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/mylinh-grid_and_top.jpg?v=1680412819097" style="width: 500px;" >
+      <img src="https://cdn.glitch.global/7be31afe-d98d-4bec-8a83-8dc9c85a230f/mylinh-grid%20and%20top%20cropped.jpeg?v=1680674547496" style="width: 500px;" >
       <div class="caption">
           <p>Mylinh posing with the both parts of Chesster's board. Pictured on the left is</p>
           <p>the bottom box with the underlying chessboard grid structure inside. Mylinh holds</p>
@@ -302,20 +309,20 @@ background-repeat: repeat; background-attachment: fixed; overflow: scroll; width
     </div>
 
   <div class="mySlides">
-    <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/biglittobonding.jpg?v=1680472301612" style="width:500px">
+    <img src="https://cdn.glitch.global/7be31afe-d98d-4bec-8a83-8dc9c85a230f/justin%20and%20kevin%20cropped.PNG?v=1680674634057" style="width:500px">
     <div class="caption">
       <p>Our father Keven Cai comes to the rescue! Pictured to the right is him helping debug the multiplexers and Arduino.</p>
   </div>
   </div>
   <div class="mySlides">
-    <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/arduino%2Bmultis.jpg?v=1680472315196" style="width:500px">
+    <img src="https://cdn.glitch.global/7be31afe-d98d-4bec-8a83-8dc9c85a230f/arduino%2Bmultis%20cropped.jpeg?v=1680674514076" style="width:500px">
     <div class="caption">
       <p>The body of Chesster. The medium-sized green chip is our Arduino. Wires connect the Arduino to our 2 </p>
          <p>breadboards; breadboards that are housing our 4 16-to-1 multiplexers.</p>
   </div>
   </div>
   <div class="mySlides">
-    <img src="https://cdn.glitch.global/e590b6e9-4ece-4487-a898-7a7faac04200/bluetape.jpg?v=1680472311150" style="width:500px">
+    <img src="https://cdn.glitch.global/7be31afe-d98d-4bec-8a83-8dc9c85a230f/bluetape%20cropped.jpeg?v=1680674761936" style="width:500px">
     <div class="caption">
       <p>Testing the LED’s accuracy when displaying the move the Chess AI wants to output. </p>
          <p>The lights pictured display the knight moving.</p>
